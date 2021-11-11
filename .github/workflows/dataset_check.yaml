@@ -9,4 +9,4 @@ jobs:
     name: Run dataset usage check
     steps:
     - name: Run dataset usage check
-      uses: Jongmassey/dataset-accesscheck-action@v1
+      uses: Jongmassey/dataset-accesscheck-action@v2
