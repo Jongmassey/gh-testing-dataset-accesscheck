@@ -1,0 +1,12 @@
+name: Test that the project does not use any resricted datasets
+
+on: [push, workflow_dispatch]
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: Run dataset usage check
+    steps:
+    - name: Run dataset usage check
+      uses: Jongmassey/dataset-accesscheck-action@v1
