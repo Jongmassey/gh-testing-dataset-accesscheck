@@ -1,4 +1,9 @@
-from cohortextractor import StudyDefinition, patients, codelist, codelist_from_csv  # NOQA
+from cohortextractor import (
+    StudyDefinition,
+    patients,
+    codelist,
+    codelist_from_csv,
+)  # NOQA
 
 
 study = StudyDefinition(
@@ -10,5 +15,6 @@ study = StudyDefinition(
     population=patients.registered_with_one_practice_between(
         "2019-02-01", "2020-02-01"
     ),
-    icu_admittance=patients.admitted_to_icu(on_or_after='index_date')
+    icu_admittance=patients.admitted_to_icu(on_or_after="index_date"),
+    second_icu_admittance=patients.admitted_to_icu(on_or_after="index_date"),
 )
